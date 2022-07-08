@@ -1,47 +1,25 @@
-## Простенький сервер
-### На стороне сервера можно отследить всю информацию о запросах клиентов
+## HTTP-сервер
+
+- Простейший способ запустить HTTP-сервер — вызвать `http.ListenAndServe`:
 
 ```go
 package main
 
 import (
-"fmt"
 "log"
 "net/http"
-"strings"
 )
 
-func printerAdditionalInfo(r *http.Request) {
-// printing server information
-fmt.Println(r.Form)
-fmt.Println("path", r.URL.Path)
-fmt.Println("scheme", r.URL.Scheme)
-for k, v := range r.Form {
-fmt.Println("key:", k)
-fmt.Println("val:", strings.Join(v, ""))
-}
-}
+type Handler struct {}
 
-func simpleHandler(w http.ResponseWriter, r *http.Request) {
-err := r.ParseForm()
+func (h *Handler) ServeHTTP(w http.ResponseWriter, req *http.Request){
+_,err := w.Write([]byte("hello"))
 if err != nil {
-return
-}
-
-printerAdditionalInfo(r)
-
-_, err = fmt.Fprintf(w, "Hello big dady!")
-if err != nil {
-return
+log.Println(err)
 }
 }
 
 func main() {
-http.HandleFunc("/", simpleHandler)
-err := http.ListenAndServe(":9090", nil)
-if err != nil {
-log.Fatal("ListenAndServe: ", err)
+log.Println(http.ListenAndServe("127.0.0.1:9090", &Handler{}))
 }
-}
-
 ```
