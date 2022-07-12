@@ -10,34 +10,34 @@
 
 ## Подробнее о создании контекста
 
-* context.Background() ctx Context
+#### context.Background() ctx Context
 Эта функция возвращает пустой контекст (правильно использовать на самых высоких уровнях программы)
 ```go
 ctx, cancel := context.Background()
 ```
 
-* context.TODO() ctx Context
+#### context.TODO() ctx Context
 Эта функция также создает пустой контекст.
 ```go
 ctx := context.TODO()
 ```
 
-* context.WithValue(parent Context, key, val interface{}) ctx Context
+#### context.WithValue(parent Context, key, val interface{}) ctx Context
 Эта функция принимает контекст и возвращает производный от него контекст, в котором значение `val` связано с `key` и проходит через всё контекстное дерево.
 ```go
 ctx := context.WithValue(context.Background(), key, "test")
 ```
 
-*  ctx.Value(key interface{}) val interface{}
+####  ctx.Value(key interface{}) val interface{}
 Эта функция в данном контексте ищет значение 'val' по связному 'key'
 ```go
 val := ctx.Value("myKey"))
 ```
 
-* context.WithCancel(parent Context) (ctx Context, cancel CancelFunc)
+#### context.WithCancel(parent Context) (ctx Context, cancel CancelFunc)
 Эта функция создает новый контекст из переданного ей родительского. Возвращается производный контекст и функция отмены. Вызывать функцию отмены контекста должна только та функция, которая его создает. Вы можете передавать функцию отмены другим функциям, если хотите, но это настоятельно не рекомендуется.
 
-* context.WithTimeout(parent Context, timeout time.Duration) (ctx Context, cancel CancelFunc)
+#### context.WithTimeout(parent Context, timeout time.Duration) (ctx Context, cancel CancelFunc)
 Эта функция создает контекст от родительского с определенным таймаутом.
 ```go
 ctx, cancel := context.WithTimeout(context.Background(), 15 * time.Second)
@@ -61,7 +61,7 @@ func doWork(ctx context.Context) {
 ```
 
 
-* context.WithCancel(parent Context) (ctx Context, cancel CancelFunc)
+#### context.WithCancel(parent Context) (ctx Context, cancel CancelFunc)
 Возвращает копию родителя с новым каналом Done.
 Канал Done возвращенного контекста закрывается, когда вызывается возвращенная функция отмены или когда закрывается канал Done родительского контекста, в зависимости от того, что произойдет раньше.
 
