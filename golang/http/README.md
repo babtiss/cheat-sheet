@@ -24,7 +24,7 @@ if err != nil {
 ```
 
 ### Client
-- Для контроля над клиентскими HTTP заголовками, политикой перенаправлений, и другими настройками используют Client:
+- Для контроля над клиентскими HTTP заголовками, политикой перенаправлений, и другими настройками используют `Client`:
 
 ```go
 client := &http.Client{
@@ -75,8 +75,8 @@ resp, err := client.Get("https://example.com")
 Для повышения эффективности их следует создавать только один раз и использовать повторно.
 
 ### Handler
-- ListenAndServe стартует HTTP-сервер с заданным адресом и обработчиком (handler). Обработчик (handler) обычно равен nil, что означает использовать DefaultServeMux.
-Handle и HandleFunc добавляют обработчики к DefaultServeMux(мультиплексор HTTP-запросов):
+- ListenAndServe стартует HTTP-сервер с заданным адресом и обработчиком. Обработчик обычно равен nil, что означает использовать `DefaultServeMux`(мультиплексор HTTP-запросов).
+Handle и HandleFunc добавляют обработчики к `DefaultServeMux`:
 
 ```go
 http.Handle("/foo", fooHandler)
@@ -92,12 +92,11 @@ log.Fatal(http.ListenAndServe(":8080", nil))
 
 - Больше контроля над поведением сервера доступно при создании собственного сервера:
 ```go
-s := &http.Server{ Адрес
-: ":8080",
-Обработчик: myHandler,
+s := &http.Server{ address: ":8080",
+handler: myHandler,
 ReadTimeout: 10 * time.Second,
 WriteTimeout: 10 * time.Second,
 MaxHeaderBytes: 1 << 20,
 }
-log.Fatal(s.ListenAndServe(s.ListenAndServe(s.ListenAndServe(s.ListenAndServe) ))
+log.Fatal(s.ListenAndServe(s.ListenAndServe(s.ListenAndServe(s.ListenAndServe)))
 ```
