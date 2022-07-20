@@ -207,3 +207,18 @@ func main() {
     f_iter(&s)
 }
 ```
+
+Результат выполнения:
+```go
+slice by value
+[1]
+[0]
+
+slice by pointer
+[3]
+[0 5]
+
+iter
+0 - 0
+1 - 5
+```
