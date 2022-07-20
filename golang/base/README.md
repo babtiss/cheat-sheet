@@ -174,12 +174,6 @@ func f_slice_pointer_size(s *[]int) {
     *s = append(*s, 5)
 }
 
-func f_iter(s *[]int) {
-    for i, v := range *s {
-      fmt.Println(i, "-", v)
-    }
-}
-
 func main() {
     var s []int
 
@@ -201,10 +195,6 @@ func main() {
     s = []int{0}
     f_slice_pointer_size(&s)
     fmt.Println(s)
-
-    fmt.Println()
-    fmt.Println("iter")
-    f_iter(&s)
 }
 ```
 
@@ -217,8 +207,4 @@ slice by value
 slice by pointer
 [3]
 [0 5]
-
-iter
-0 - 0
-1 - 5
 ```
