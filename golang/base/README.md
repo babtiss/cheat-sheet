@@ -147,3 +147,63 @@ var people = map[string]int{ "Tom": 1, "Bob": 2, "Sam": 8}
 delete(people, "Bob")
 fmt.Println(people)     // map[Tom:1  Sam:8]
 ```
+
+> При передачи `map` или `slice` в другую область видимости - данные объекты копируются по значению, но т.к. у них внутри указатели то происходит копирование указателей, а не содержимого мапы/среза. т.е. при передаче по значению - можно изменять элементы внутри slice.array, т.к. указатель после копирования будет указывать на ту же область памяти что и исходный, но вот изменить длину или вместимость срезу уже не получится. Точнее эти изменения не будут видны снаружи вызываемой функции, т.к. длина, вместимость и (возможно) указатель array изменятся только в копии среза.
+
+Пример:
+```go
+package main
+
+import (
+"fmt"
+)
+
+func f_slice_item(s []int) {
+    s[0] = 1
+}
+
+func f_slice_size(s []int) {
+    s = append(s, 1)
+}
+
+func f_slice_pointer_item(s *[]int) {
+    (*s)[0] = 3
+}
+
+func f_slice_pointer_size(s *[]int) {
+    *s = append(*s, 5)
+}
+
+func f_iter(s *[]int) {
+    for i, v := range *s {
+      fmt.Println(i, "-", v)
+    }
+}
+
+func main() {
+    var s []int
+
+    fmt.Println("slice by value")
+    s = []int{0}
+    f_slice_item(s)
+    fmt.Println(s)
+
+    s = []int{0}
+    f_slice_size(s)
+    fmt.Println(s)
+
+    fmt.Println()
+    fmt.Println("slice by pointer")
+    s = []int{0}
+    f_slice_pointer_item(&s)
+    fmt.Println(s)
+
+    s = []int{0}
+    f_slice_pointer_size(&s)
+    fmt.Println(s)
+
+    fmt.Println()
+    fmt.Println("iter")
+    f_iter(&s)
+}
+```
