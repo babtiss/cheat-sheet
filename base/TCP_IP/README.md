@@ -4,7 +4,7 @@
 
 Как и OSI, модель имеет деление на уровни, внутри которых действуют определенные протоколы и выполняются собственные функции.
 
-![Image](https://github.com/babtiss/cheat-sheet/base/Models.jpg)
+![Image](https://github.com/babtiss/cheat-sheet/blob/master/base/Models.jpg)
 
 
 ### Прикладной уровень
