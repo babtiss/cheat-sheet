@@ -100,8 +100,18 @@ f := make([]int, 5, 5)
 ### Срезы
 
 - Срез - это массив с динамическим размером.
-Единственное отличие объявления среза от объявления массива — отсутствие указания длины в квадратных скобках.
+```
+type slice struct {
+    array unsafe.Pointer
+    len   int
+    cap   int
+}
+```
+* Ёмкость(cap) - это выделенная память под элементы, при превышении размер автоматически увеличивается в два раза.
+* Длина(len) - это инициализированная память элементов, для превышения(добавления) нужно вручную использовать
+* array - это указатель на область памяти(массив)
 
+Единственное отличие объявления среза от объявления массива — отсутствие указания длины в квадратных скобках.
 
 ```go
 var a []float64
@@ -110,21 +120,91 @@ c := make([]float64, 5, 10) //При этом будет создан обнул
 
 arr := [5]float64{1,2,3,4,5}
 x := arr[0:5]
+z := arr[0:5:10]
 ```
 
 - Добавление в срез `append(slice []Type, value Type)`
-
 
 ```go
 users := []string{"Tom", "Alice", "Kate"}
 users = append(users, "Bob")
 ```
-- Удаление элемента c помощью `append`
 
+- Удаление элемента c помощью `append`
 
 ```go
 slice = append(slice[:i], slice[i+1:]...)
 ```
+
+#### Пример 1
+
+```go
+func main() {
+    var array [10]int
+
+    var slice = array[5:6]
+
+    fmt.Println("length of slice: ", len(slice))
+    fmt.Println("capacity of slice: ", cap(slice))
+    fmt.Println(&slice[0] == &array[5])
+}
+```
+output:
+```go
+length of slice:  1
+capacity of slice:  5
+true
+```
+Сapacity перенимается от начала среза внутри массива до его конца.
+Адреса первого элемента среза и шестого элемента массива равны.
+
+#### Пример 2
+```go
+func AddElement(slice []int, e int) []int {
+    return append(slice, e)
+}
+
+func main() {
+    var slice []int
+    slice = append(slice, 1, 2, 3)
+
+    newSlice := AddElement(slice, 4)
+    fmt.Println("capasity = ", cap(newSlice))
+}
+```
+output:
+
+```go
+capasity = 6
+```
+
+Если при добавлении элемента длина увеличивается на единицу и тем самым превышает заявленный объем, необходимо предоставить новый объем (в этом случае текущий объем обычно удваивается).
+
+#### Пример 3
+```go
+    func AddElement(slice []int, e int) {
+    slice = append(slice, e)
+    slice[2] = 1
+    fmt.Println(slice)
+}
+
+func main() {
+    arr := [5]int{1, 2, 3, 4, 5}
+    slice := arr[0:3:4]
+    AddElement(slice, 4)
+    fmt.Println(slice)
+}
+
+```
+output:
+
+```go
+[1 2 1 4]
+[1 2 1]
+
+```
+Так в функцию передается указатель на область данных - то меняя элементы среза внутри функции - вы меняете оригинал тоже.
+Но добавление нового элемента - не изменит оригинал.
 
 ### Словарь
 
