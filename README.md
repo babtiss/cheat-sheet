@@ -14,3 +14,6 @@
 * [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
 * [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/%20thread%20safety)
 
+### *Сеть*
+[Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
+[Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
