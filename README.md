@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="325" height="281" src="https://github.com/babtiss/cheat-sheet/tree/master/go.jpeg">
+    <img width="325" height="281" src="https://github.com/babtiss/cheat-sheet/blob/master/go.jpeg">
     # [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Cheat-sheet+для+разработчика)](https://git.io/typing-svg)
 </div>
 ### *Golang*
