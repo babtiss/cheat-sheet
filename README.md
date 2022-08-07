@@ -3,22 +3,23 @@
 ## [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Руководство+для+разработчика)](https://git.io/typing-svg)
 
 ### *Golang*
-[О типах и примитавах Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
+* [О типах и примитавах Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
 
-[Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
+* [Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
 
-[Пакет http](https://github.com/babtiss/cheat-sheet/tree/master/golang/http)
+* [Пакет http](https://github.com/babtiss/cheat-sheet/tree/master/golang/http)
 
-[Многопоточность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading)
-* [Каналы](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/chanel)
-* [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
-* [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/%20thread%20safety)
+* [Многопоточность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading)
+- [Каналы](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/chanel)
+- [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
+- [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/%20thread%20safety)
 
 ### *Сеть*
-[Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
+* [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
 
-[Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
+* [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
+* [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
