@@ -3,26 +3,29 @@ HTTP определяет множество методов запроса, ко
 
 ### GET
 Метод GET запрашивает получение ресурса и не влияет на его содержимое. Запросы с использованием этого метода могут только извлекать данные.
->>>
-  Свойства метода
-    - Кешируемый
-    - Идемпотентный
-    - Небезопасный
-<<<
 
-<{Примечание и синтаксис
-Строка запроса (имя/значение) отправляется в URL:
-```
-/login.php?argument1=value1&argument2=value2
-```
-Синтаксис
-```html
-<form  method="get">
-    First name: <input type="text" placeholder="Your name"><br/>
-    <input type="submit" value="Submit">
-</form>
-```
-}>
+<details>
+    <summary>Свойства метода</summary>
+    * Кешируемый
+    * Идемпотентный
+    * Небезопасн
+</details>
+
+<details>
+    <summary>Примечание и синтаксис</summary>
+    Строка запроса (имя/значение) отправляется в URL:
+    ```
+    /login.php?argument1=value1&argument2=value2
+    ```
+    Синтаксис
+    ```html
+    <form  method="get">
+        First name: <input type="text" placeholder="Your name"><br/>
+        <input type="submit" value="Submit">
+    </form>
+    ```
+</details>
+
 
 ### POST
 Метод POST используется для отправки сущностей к определённому ресурсу. Часто вызывает изменение состояния или какие-то побочные эффекты на сервере.
