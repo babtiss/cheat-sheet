@@ -1,6 +1,6 @@
 # Cheat-sheet
 
-## Руководство для разработки
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Руководство+для+разработчика)](https://git.io/typing-svg)
 
 ### *Golang*
 [О типах и примитавах Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
@@ -21,3 +21,4 @@
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
+* [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
