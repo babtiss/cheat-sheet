@@ -6,13 +6,16 @@ HTTP определяет множество методов запроса, ко
 
 <details>
     <summary>Свойства метода</summary>
+
     * Кешируемый
     * Идемпотентный
-    * Небезопасн
+    * Небезопасный
+
 </details>
 
 <details>
     <summary>Примечание и синтаксис</summary>
+
     Строка запроса (имя/значение) отправляется в URL:
     ```
     /login.php?argument1=value1&argument2=value2
@@ -24,6 +27,7 @@ HTTP определяет множество методов запроса, ко
         <input type="submit" value="Submit">
     </form>
     ```
+
 </details>
 
 
