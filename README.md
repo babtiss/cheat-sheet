@@ -18,8 +18,18 @@
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
 * [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
 * [Методы http протокола](https://github.com/babtiss/cheat-sheet/tree/master/base/http_request)
+* [Чем отличатся HTTP от HTTPS, SSL/TLS](https://github.com/babtiss/cheat-sheet/tree/master/base/httpVShttps)
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
 * [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
+
+### Микросервисы/ Монолит /
+* TODO
+
+### Базы данных
+* TODO
+
+### Популярные задачи на собеседованиях
+* TODO
