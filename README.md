@@ -4,9 +4,7 @@
 
 ### *Golang*
 * [О типах и примитавах Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
-
 * [Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
-
 * [Пакет http](https://github.com/babtiss/cheat-sheet/tree/master/golang/http)
 
 * [Многопоточность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading)
@@ -16,8 +14,8 @@
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
-
 * [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
+* [Методы http протокола](https://github.com/babtiss/cheat-sheet/tree/master/base/http_request)
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
