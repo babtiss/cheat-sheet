@@ -14,6 +14,7 @@
     * [Каналы](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/chanel)
     * [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
     * [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/%20thread%20safety)
+* [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/base/go.mod)
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
@@ -27,7 +28,13 @@
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
 * [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
 
+### Инфраструктура и деплой
+* TODO
+
 ### Микросервисы/ Монолит /
+* TODO
+
+### Git
 * TODO
 
 ### Базы данных
