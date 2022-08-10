@@ -23,7 +23,7 @@
 * [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
 * [Методы http протокола](https://github.com/babtiss/cheat-sheet/tree/master/base/http_request)
 * [Чем отличатся HTTP от HTTPS, SSL/TLS](https://github.com/babtiss/cheat-sheet/tree/master/base/httpVShttps)
-* WEBSOCKET TODO
+* [WebSocket](https://github.com/babtiss/cheat-sheet/tree/master/base/webSocket)
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
@@ -34,6 +34,9 @@
 * TODO
 
 ### Микросервисы/ Монолит /
+* TODO
+
+### Тестирование
 * TODO
 
 ### Git
