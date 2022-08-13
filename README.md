@@ -14,8 +14,8 @@
     * [Каналы](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/chanel)
     * [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
     * [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/%20thread%20safety)
-* Устройство Golang\
-    * [Планировщик в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/sheduler)
+* Устройство Golang
+    * [Планировщик в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/scheduler)
     * Алокация памяти в go TODO
     * [Сборщик мусора в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/garbage)
     * [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/golang/go.mod)
