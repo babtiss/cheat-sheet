@@ -1,5 +1,5 @@
 # Clean Architecture
-> По книге Роберта Мартина.
+> По книге Роберта Мартина TODO.
 
 [Habr](https://habr.com/ru/company/mobileup/blog/335382/)
 
