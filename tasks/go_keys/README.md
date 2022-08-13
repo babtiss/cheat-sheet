@@ -18,5 +18,5 @@ func main() {
 ```
 <details>
     <summary>Ответ</summary>
-    [1 2 3 5] [1 2 3 5]
+    [1 2 3 6] [1 2 3 6]
 </details>
