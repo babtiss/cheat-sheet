@@ -49,5 +49,5 @@
 * TODO
 
 ### Задачи на собеседованиях
-* Задачи которые попадались мне TODO
-* Популярные задачи TODO
+* [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
+* Популярные задачи на алгосы TODO
