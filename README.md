@@ -27,6 +27,12 @@
 * [Чем отличатся HTTP от HTTPS, SSL/TLS](https://github.com/babtiss/cheat-sheet/tree/master/base/httpVShttps)
 * [WebSocket](https://github.com/babtiss/cheat-sheet/tree/master/base/webSocket)
 
+### *ОС*
+* [Книжка](https://studme.org/329845/informatika/operatsionnye_sistemy) ; Тут конечно дофига - но полезно некоторые темы почитать
+* Сетевая подсистема
+    * [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
+* Виртуальная файловая система
+
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
