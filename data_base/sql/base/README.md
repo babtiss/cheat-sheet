@@ -16,3 +16,41 @@ GROUP BY ('столбец, по которому хотим сгруппиров
 HAVING ('условие/фильтрация на уровне сгруппированных данных; необязательно')
 ORDER BY ('столбец, по которому хотим отсортировать вывод; необязательно')
 ```
+
+### SELECT, FROM
+SELECT, FROM — обязательные элементы запроса, которые определяют(выводят/достают) выбранные столбцы, их порядок и источник данных.
+- Выбрать все (обозначается как *) из таблицы Customers:
+```sql
+SELECT * FROM Customers
+```
+- Выбрать столбцы CustomerID, CustomerName из таблицы Customers:
+```sql
+SELECT CustomerID, CustomerName FROM Customers
+```
+### WHERE
+WHERE — необязательный элемент запроса, который используется, когда нужно отфильтровать данные по нужному условию.
+- Фильтрация по одному условию и одному значению:
+```sql
+SELECT * from Customers
+WHERE City = 'London'
+```
+- Еще пример фильтрации:
+```sql
+SELECT * from Customers
+WHERE country in ('Germany', 'Russia') AND City not in ('Berlin', 'Aachen') AND CustomerID > 15
+```
+
+### GROUP BY
+GROUP BY — необязательный элемент запроса, с помощью которого можно задать агрегацию по нужному столбцу (например, если нужно узнать какое количество клиентов живет в каждом из городов).
+
+При использовании GROUP BY обязательно:
+1. перечень столбцов, по которым делается разрез, был одинаковым внутри SELECT и внутри GROUP BY,
+2. агрегатные функции (SUM, AVG, COUNT, MAX, MIN) должны быть также указаны внутри SELECT с указанием столбца, к которому такая функция применяется.
+```sql
+SELECT City, count(CustomerID) FROM Customers
+GROUP BY City
+```
+```sql
+SELECT City, count(CustomerID) FROM Customers
+GROUP BY City
+```
