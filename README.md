@@ -5,7 +5,9 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Cheat-sheet+для+разработчика)](https://git.io/typing-svg)
 
 ### *Golang*
-* [О типах и примитивах Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
+* База
+    * [Основные типы и примитивы Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
+    * [Интерфейсы](https://github.com/babtiss/cheat-sheet/tree/master/golang/interface)
 * [ООП в Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/oop)
 * Пакеты
     * [Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
@@ -28,7 +30,7 @@
 * [WebSocket](https://github.com/babtiss/cheat-sheet/tree/master/base/webSocket)
 
 ### *ОС*
-* [Книжка](https://studme.org/329845/informatika/operatsionnye_sistemy) ; Тут конечно дофига - но полезно некоторые темы почитать
+* [Книжка](https://studme.org/329845/informatika/operatsionnye_sistemy) ; Сама книжка посредственная, но тут все полезные темы в оглавлении
 * Сетевая подсистема
     * [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
 * Виртуальная файловая система
