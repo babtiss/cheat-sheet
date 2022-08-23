@@ -2,13 +2,28 @@
 Это примитивы, которые беспечивают возможность общения нескольких горутин друг с другом, чтобы синхронизировать их выполнение.
 
 > Структура канала TODO;
+
 > Подробно под капотом TODO;
 
-Пример создания канала:
+### Функции каналов
+
+#### Создать канал
 ```go
-go chanel := make(chan string)
+var chanel chan int      // нулевое значение канала — это nil
+chanel := make(chan int) // инициализируем
 ```
 
+#### Запись в канал
+```go
+c <- data
+```
+
+#### Чтение из канала
+```go
+data = <- c
+```
+
+### Как работают каналы:
 Если канал пустой, то горутина-получатель блокируется, пока в канале не окажутся данные.
 Когда горутина-отправитель посылает данные, горутина-получатель получает эти данные и возобновляет работу.
 
@@ -73,7 +88,7 @@ func printer(c <-chan string)
 ### Буферизированный канал
 Буферизированные каналы также создаются с помощью функции `make()`, только в качестве второго аргумента в функцию передается емкость канала.
 Если канал пуст, то получатель ждет, пока в канале появится хотя бы один элемент.
-
+Длина канала — это количество значений в очереди (не считанных) в буфере канала, емкость — это размер самого буфера канала.
 При отправке данных горутина-отправитель ожидает, пока в канале не освободится место для еще одного элемента и отправляет элемент, только тогда, когда в канале освобождается для него место.
 
 #### Рассмотрим на примерах:
@@ -135,56 +150,109 @@ intCh <- 10
 intCh <- 5 // дедлок, нет места под запись в канал
 ```
 
-### SELECT
-Оператор `select` позволяет go-процедуре находиться в ожидании нескольких операций передачи данных.
-`select` блокируется до тех пор, пока один из его блоков case не будет готов к запуску, а затем выполняет этот блок.
-Если сразу несколько блоков могут быть запущены, то выбирается произвольный.
-Блок `default` в `select` запускается, если никакой другой блок не готов.
+### Deadlock (Взаимная блокировка)
+Как уже ранее говорилось, чтение или запись данных в канал блокирует горутину и контроль передается свободной горутине.
+Представим, что такие горутины отсутствуют, либо все горутины блокированы.
+В этот момент возникает deadlock, который приведет к аварийному завершению программы.
 
-Рассмотрим работу оператора на примере:
+#### Пример:
 ```go
 package main
 
-import (
-"fmt"
-"time"
-)
+import "fmt"
 
 func main() {
+    fmt.Println("main() started")
 
-    c1 := make(chan string)
-    c2 := make(chan string)
+    c := make(chan string)
+    c <- "John"
 
-    go func() {
-        time.Sleep(1 * time.Second)
-        c1 <- "one second"
-    }()
-    go func() {
-        time.Sleep(3 * time.Second)
-        c2 <- "three second"
-    }()
-
-    for {
-        select {
-            case msg1 := <-c1:
-                fmt.Println("received", msg1)
-            case msg2 := <-c2:
-                fmt.Println("received", msg2)
-        }
-    }
+    fmt.Println("main() stopped")
 }
 ```
-В таком случае мы получим последовательно строки:
-```
-received one second
-received one second
-received one second
-received three second
-received one second
-received one second
-received one second
-received three second
-...
 
+<details>
+    <summary>Что выведет программа?</summary>
+
+    main() started
+    fatal error: all goroutines are asleep - deadlock!
+    goroutine 1 [chan send]:
+    main.main()
+        program.go:10 +0xfd
+    exit status 2
+
+</details>
+
+### Закрытие канала
+В Go так же можно закрыть канал, через закрытый канал невозможно будет передать или принять данные.
+Горутина может проверить закрыт канал или нет, используя следующую конструкцию:
+`val, ok := <- channel`, где `ok` будет истиной в случае, если канал открыт или операция чтения может быть выполнена, иначе `ok` будет false, если канал закрыт и отсутствуют данных для чтения из него.
+Закрыть канал можно, используя встроенную функцию close, используя следующий синтаксис `close(channel)`
+
+#### Пример:
+```go
+package main
+
+import "fmt"
+
+func reader(c chan string) {
+    <-c // for John
+    <-c // for Mike
+}
+
+func main() {
+    fmt.Println("main() started")
+
+    c := make(chan string, 1)
+
+    go reader(c)
+    c <- "John"
+
+    close(c) // closing channel
+
+    c <- "Mike"
+    fmt.Println("main() stopped")
+}
+
+<details>
+    <summary>Что выведет программа?</summary>
+
+    main() started
+    panic: send on closed channel
+    goroutine 1 [running]:
+    main.main()
+        program.go:20 +0x120
+    exit status 2
+
+</details>
+
+
+#### Пример с циклом `for`
+```go
+package main
+
+import "fmt"
+
+func squares(c chan int) {
+    for i := 0; i <= 9; i++ {
+        c <- i * i
+    }
+
+    close(c) // close channel
+}
+
+func main() {
+    fmt.Println("main() started")
+    c := make(chan int)
+
+    go squares(c) // start goroutine
+
+    for val := range c {
+        fmt.Println(val)
+    }
+
+    fmt.Println("main() stopped")
+}
 ```
-Это происходит, потомучто одна горутина выполняет запись и чтение, пока другая спит.
+
+> Если вы не закроете канал для цикла `for` с использованием `range`, то программа будет завершена аварийно из-за `dealock` во время выполнения.

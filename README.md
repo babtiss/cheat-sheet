@@ -12,13 +12,14 @@
 * Пакеты
     * [Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
     * [Пакет http](https://github.com/babtiss/cheat-sheet/tree/master/golang/http)
-* Многопоточность
+* Примитивы конкурентности
     * [Каналы](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/chanel)
     * [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
-    * [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety)
+    * [Операторы select ... case](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/operators)
+* [Потокобезопасность](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety)
 * Устройство Golang
     * [Планировщик в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/scheduler)
-    * Алокация памяти в go TODO
+    * Алокация памяти в go TODO. Про механизм выделения памяти - https://habr.com/ru/company/ruvds/blog/442648/
     * [Сборщик мусора в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/garbage)
     * [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/golang/go.mod)
 
@@ -45,12 +46,6 @@
 
 ### Архитектура
 * микросервисы/ монолит/ TODO
-
-### Тестирование
-* TODO
-
-### Git
-* TODO
 
 ### Базы данных
 * SQL
