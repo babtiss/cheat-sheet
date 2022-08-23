@@ -41,12 +41,6 @@
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
 * [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
 
-### Инфраструктура и деплой
-* TODO
-
-### Архитектура
-* микросервисы/ монолит/ TODO
-
 ### Базы данных
 * SQL
     * [Быстро по sql](https://github.com/babtiss/cheat-sheet/tree/master/data_base/sql)
