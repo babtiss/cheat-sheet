@@ -213,6 +213,7 @@ func main() {
     c <- "Mike"
     fmt.Println("main() stopped")
 }
+```
 
 <details>
     <summary>Что выведет программа?</summary>
