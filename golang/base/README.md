@@ -1,6 +1,9 @@
 # Базовый golang
-
 > Дописать разные мелочи: TODO;
+
+- Типы данных
+    [тип](https://github.com/babtiss/cheat-sheet/tree/master/golang/base#%D1%86%D0%B5%D0%BB%D0%BE%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%82%D0%B8%D0%BF%D1%8B)
+********************************
 
 ## Типы данных
 

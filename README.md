@@ -45,7 +45,7 @@
 * Транзакции
     * [ACID](https://github.com/babtiss/cheat-sheet/tree/master/data_base/acid)
 * Распределенные системы
-    * [Что это?]()
+    * [Что это?](https://github.com/babtiss/cheat-sheet/tree/master/data_base/distributed_system/base)
 
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
