@@ -9,6 +9,7 @@
     * [Основные типы и примитивы Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/base)
     * [Интерфейсы](https://github.com/babtiss/cheat-sheet/tree/master/golang/interface)
 * [ООП в Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/oop)
+    * [Паттерны проектирования с примерами на Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang/oop)
 * Пакеты
     * [Пакет context](https://github.com/babtiss/cheat-sheet/tree/master/golang/context)
     * [Пакет http](https://github.com/babtiss/cheat-sheet/tree/master/golang/http)
