@@ -32,9 +32,7 @@
 
 ### *ОС*
 * [Книжка](https://studme.org/329845/informatika/operatsionnye_sistemy) ; Сама книжка посредственная, но тут все полезные темы в оглавлении
-* Сетевая подсистема
-    * [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
-* Виртуальная файловая система
+* [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
 
 ### *ООП*
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
@@ -43,9 +41,11 @@
 
 ### Базы данных
 * SQL
-    * [Быстро по sql](https://github.com/babtiss/cheat-sheet/tree/master/data_base/sql)
-    * [Индексы]()
-* TODO
+    * [База sql](https://github.com/babtiss/cheat-sheet/tree/master/data_base/sql/base)
+* Транзакции
+    * [ACID](https://github.com/babtiss/cheat-sheet/tree/master/data_base/acid)
+* Распределенные системы
+    * [Что это?]()
 
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
