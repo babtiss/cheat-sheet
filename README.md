@@ -39,6 +39,7 @@
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/OOP/solid)
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
 * [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
+* [REST](https://github.com/babtiss/cheat-sheet/tree/master/OOP/rest)
 
 ### Базы данных
 * SQL
