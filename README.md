@@ -34,6 +34,7 @@
 
 ### *ОС*
 * [Книжка](https://studme.org/329845/informatika/operatsionnye_sistemy) ; Сама книжка посредственная, но тут все полезные темы в оглавлении
+* Таненбаум Э., Бос Х. Современные операционные системы - крутая книжка
 * [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
 
 ### *ООП*
