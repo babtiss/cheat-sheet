@@ -3,7 +3,13 @@
 Код потокобезопасен, если он функционирует исправно при использовании его из нескольких потоков одновременно.
 В частности, он должен обеспечивать правильный доступ нескольких потоков к разделяемым данным.
 
-#### Пример проблемы
+## INDEX:
+- [Проблема DataRace](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B)
+- [Пакет sync](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety#%D0%BF%D1%80%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D0%B2%D1%8B-sync)
+    - [type Mutex](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety#syncmutex--mutually-exclusive-lock)
+    - [type Once](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety#synconce)
+
+#### Пример проблемы DataRace
 Гонка горутин иногда приводит к изменениям состояния любого значения, хранящегося в адресе памяти без какого-либо соблюдения порядка.
 
 ```go
@@ -161,15 +167,52 @@ output:
 ```
 
 
-### `sync.Pool`
+### `sync.WaitGroup`
+Группа ожидания - предназначена для создания точки, в которой программа дожидается окончания всех горутин в группе.
 
+Основная горутина вызывает Add, чтобы установить количество ожидаемых горутин.
+Затем запускается каждая горутина и по завершении вызывает Done.
+В то же время, Wait можно использовать для блокировки, пока не закончатся все горутины.
+
+```go
+func (wg *WaitGroup) Add(delta int)
+// Add добавляет дельту (может быть отрицательной) к счетчику группы ожидания.
+// Если счетчик становится равным нулю: все горутины, заблокированные в ожидании, освобождаются.
+// Если счетчик становится отрицательным: получим панику.
+
+func (wg * WaitGroup ) Done()
+// Done уменьшает значение счетчика WaitGroup на единицу.
+
+func (wg *WaitGroup) Wait()
+// Блокировка горутины, пока счетчик WaitGroup не станет равным нулю.
 ```
-type Pool struct {
 
-    // New optionally specifies a function to generate
-    // a value when Get would otherwise return nil.
-    // It may not be changed concurrently with calls to Get.
-    New func() any
-    // contains filtered or unexported fields
+> Вызовы Add должны происходить до оператора, создающего горутину или другое ожидаемое событие.
+
+Пример использования:
+```go
+package main
+
+import (
+    "fmt"
+    "sync"
+)
+
+func main() {
+    funcWithWaitGroup()
+}
+
+func funcWithWaitGroup() {
+    wg := sync.WaitGroup{}
+    wg.Add(10)
+    for i := 0; i < 10; i++ {
+        go func(i int) {
+            fmt.Println(i)
+            wg.Done()
+        }(i)
+    }
+    wg.Wait()
+    fmt.Println("exit")
 }
 ```
+
