@@ -19,12 +19,12 @@
     * [Горутины](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/goroutine)
     * [Операторы select ... case](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/operators)
 * Потокобезопасность
-    [DataRace; пакеты async, atomic](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety)
+    * [DataRace; пакеты async, atomic](https://github.com/babtiss/cheat-sheet/tree/master/golang/multithreading/thread%20safety)
 * Устройство Golang
     * [Планировщик в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/scheduler)
     * [Сборщик мусора в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/garbage)
     * [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/golang/go.mod)
-    * Алокация памяти в go TODO.  https://habr.com/ru/company/ruvds/blog/442648/
+    * [Алокация памяти в go (habr) ](https://habr.com/ru/company/ruvds/blog/442648/)
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
