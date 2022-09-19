@@ -1,8 +1,4 @@
-<div align="center">
-    <img width="325" height="281" src="https://github.com/babtiss/cheat-sheet/blob/master/go.jpeg">
-</div>
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Cheat-sheet+для+разработчика)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Cheat-sheet+для+backend+разработчика)](https://git.io/typing-svg)
 
 ### *Golang*
 * База
@@ -25,6 +21,11 @@
     * [Сборщик мусора в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/garbage)
     * [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/golang/go.mod)
     * [Алокация памяти в go (habr) ](https://habr.com/ru/company/ruvds/blog/442648/)
+
+### *C++*
+* База
+  *  [Основные типы и примитивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
+  *  [Массивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
