@@ -3,11 +3,15 @@
 ## INDEX:
 - [Типы данных](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#%D1%82%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
     - [Логический тип](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#логический-тип)
-    - [Символьный тип]
-    - [Числовой тип]
-    - [Void]
-    - [Спецификатор auto]
-    - 
+    - [Символьный тип](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#символьный-тип)
+    - [Числовой тип](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#числовой-тип)
+    - [Void](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#void)
+    - [Спецификатор auto](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#спецификатор-auto)
+    - [nan и inf](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#nan-и-inf)
+- [Указатели](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#указатели)
+  - [Динамические переменные](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#динамические-переменные)
+  - [Освобождения памяти](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#освобождение-памяти)
+
 ## Типы данных
 В языке С++ все переменные имеют определенный тип данных. 
 Тип данных присваивается переменной при ее объявлении или инициализации. 

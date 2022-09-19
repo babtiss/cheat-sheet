@@ -26,7 +26,10 @@
 * База
   *  [Основные типы и примитивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
   *  [Массивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/array)
-
+  *  [Функции](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/func)
+* ООП в С++
+  * [Классы](https://github.com/babtiss/cheat-sheet/tree/master/c++/oop/class)
+  * 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
 * [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
@@ -52,7 +55,7 @@
     * [ACID](https://github.com/babtiss/cheat-sheet/tree/master/data_base/acid)
 * Распределенные системы
     * [Что это?](https://github.com/babtiss/cheat-sheet/tree/master/data_base/distributed_system/base)
-
+  
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
 * Популярные задачи на алгосы TODO
