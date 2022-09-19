@@ -25,7 +25,7 @@
 ### *C++*
 * База
   *  [Основные типы и примитивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
-  *  [Массивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
+  *  [Массивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/array)
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
