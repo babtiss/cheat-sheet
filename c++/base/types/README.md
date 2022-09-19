@@ -10,7 +10,7 @@
     - [nan и inf](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#nan-и-inf)
 - [Указатели](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#указатели)
   - [Динамические переменные](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#динамические-переменные)
-  - [Освобождения памяти](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#освобождение-памяти)
+  - [Освобождение памяти](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types#освобождение-памяти)
 
 ## Типы данных
 В языке С++ все переменные имеют определенный тип данных. 
@@ -157,7 +157,7 @@ int main()
 После удачного выполнения такой операции, в оперативной памяти компьютера происходит выделение диапазона ячеек,
 необходимого для хранения переменной типа `int`.
 
-### Освобождения памяти
+### Освобождение памяти
 При использовании оператора `delete` для указателя, знак `*` не используется.
 ```c++
 int main()
