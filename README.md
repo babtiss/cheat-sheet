@@ -59,3 +59,10 @@
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
 * Популярные задачи на алгосы TODO
+
+<details>
+    <summary>### Базы данных</summary>
+    ### Задачи на собеседованиях
+   * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
+   * Популярные задачи на алгосы TODO
+</details>
