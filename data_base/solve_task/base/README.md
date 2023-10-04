@@ -12,7 +12,7 @@
 ## TASK 1
 Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd
 
-Solve:
+Решение:
 ```sql
 SELECT model, speed, hd FROM PC
 WHERE price < 500
@@ -21,9 +21,37 @@ WHERE price < 500
 ## TASK 2
 Найдите производителей принтеров. Вывести: maker
 
-Solve:
+Неверное решение:
 ```sql
 SELECT DISTINCT maker FROM Product
 JOIN Printer ON Product.model=Printer.model
+```
+- такое решение может давать верный результат, но само по себе оно не верно. Если изучить таблицы, то решить можно проще.
+
+Решение
+```sql
+SELECT DISTINCT maker FROM Product
+WHERE type = 'Printer'
+```
+
+## TASK 3
+Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов, цена которых превышает 1000 дол.
+```sql
+SELECT model, ram, screen FROM Laptop
+WHERE price > 1000
+```
+
+## TASK 4
+Найдите все записи таблицы Printer для цветных принтеров.
+```sql
+SELECT * FROM Printer
+WHERE color = 'y'
+```
+
+## TASK 5
+Найдите номер модели, скорость и размер жесткого диска ПК, имеющих 12x или 24x CD и цену менее 600 дол.
+```sql
+SELECT model, speed, hd FROM PC
+WHERE price < 600 and (cd = '12x' or cd = '24x')
 ```
 
