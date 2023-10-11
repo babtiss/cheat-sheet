@@ -1,13 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Cheat-sheet+для+backend+разработчика)](https://git.io/typing-svg)
 
 ### [Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang)
-### *C++*
-* База
-  *  [Основные типы и примитивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/types)
-  *  [Массивы](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/array)
-  *  [Функции](https://github.com/babtiss/cheat-sheet/tree/master/c++/base/func)
-* ООП в С++
-  * [Классы](https://github.com/babtiss/cheat-sheet/tree/master/c++/oop/class)
+### [*C++*](https://github.com/babtiss/cheat-sheet/tree/master/c++)
 
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
@@ -27,13 +21,8 @@
 * [GRASP](https://github.com/babtiss/cheat-sheet/tree/master/OOP/grasp)
 * [KISS](https://github.com/babtiss/cheat-sheet/tree/master/OOP/kiss)
 
-### Базы данных
-* SQL
-    * [База sql](https://github.com/babtiss/cheat-sheet/tree/master/data_base/sql/base)
-* Транзакции
-    * [ACID](https://github.com/babtiss/cheat-sheet/tree/master/data_base/acid)
-* Распределенные системы
-    * [Что это?](https://github.com/babtiss/cheat-sheet/tree/master/data_base/distributed_system/base)
+### [Базы данных и распределенные системы](https://github.com/babtiss/cheat-sheet/tree/master/data_base)
+
   
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
