@@ -18,3 +18,5 @@
     * [Сборщик мусора в go](https://github.com/babtiss/cheat-sheet/tree/master/golang/garbage)
     * [go.mod](https://github.com/babtiss/cheat-sheet/tree/master/golang/go.mod)
     * [Алокация памяти в go (habr) ](https://habr.com/ru/company/ruvds/blog/442648/)
+* Задачи на Golang
+    * [Список](https://github.com/babtiss/cheat-sheet/blob/master/tasks/go_keys/README.md)

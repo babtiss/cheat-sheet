@@ -17,6 +17,9 @@
 * Таненбаум Э., Бос Х. Современные операционные системы - крутая книжка
 * [Сокеты](https://github.com/babtiss/cheat-sheet/tree/master/os/sockets)
 
+### *ML*
+* [MLOps](https://github.com/babtiss/cheat-sheet/tree/master/ml/mlops)
+
 ### *ПАТЕРНЫ*
 * [Clean code](https://github.com/babtiss/cheat-sheet/tree/master/paterns/clean_code)
 * [SOLID](https://github.com/babtiss/cheat-sheet/tree/master/paterns/solid)
@@ -30,4 +33,4 @@
   
 ### Задачи на собеседованиях
 * [Интересные кейсы на go](https://github.com/babtiss/cheat-sheet/tree/master/tasks/go_keys)
-* Популярные задачи на алгосы TODO
+* [Популярные задачи на алгосы](https://github.com/babtiss/ITMO_AlgoAndDataStruct?tab=readme-ov-file)
