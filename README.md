@@ -2,8 +2,8 @@
 
 ### [Golang](https://github.com/babtiss/cheat-sheet/tree/master/golang)
 ### [C++](https://github.com/babtiss/cheat-sheet/tree/master/c++)
-
-
+### [Python](https://github.com/babtiss/cheat-sheet/tree/master/python)
+### [Docker](https://github.com/babtiss/cheat-sheet/tree/master/docker)
 ### *Сеть*
 * [Стек протоколов TCP/IP](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP)
 * [Модель OSI](https://github.com/babtiss/cheat-sheet/tree/master/base/TCP_IP/OSI)
